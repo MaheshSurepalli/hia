@@ -1,4 +1,9 @@
 #!/bin/bash
+echo "Starting Streamlit app..."
+echo "PORT is: $PORT"
 
-# Run the Streamlit app on the Azure-assigned port
-streamlit run src/main.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableCORS false
+streamlit run src/main.py \
+  --server.port $PORT \
+  --server.address 0.0.0.0 \
+  --server.headless true \
+  --server.enableCORS false
